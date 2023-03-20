@@ -35,8 +35,6 @@ const criarContato = contato => {
   return card
 }
 
-let card2
-
 const carregarContatos = () => {
   const container = document.getElementById('container')
   const cards = contatos.map(criarContato)
@@ -71,7 +69,6 @@ const carregarContatos = () => {
       const messages__description = document.createElement('span')
       messages__description.classList.add('messages__description')
       messages__description.textContent = contatos[card.id].description
-
 
       //APPEND
       menuBotao.append(imgMenu)
@@ -130,7 +127,22 @@ const carregarContatos = () => {
           alignOther.append(sendOther, messageOther, dateOther)
           cardDaMensagem.append(alignOther)
         }
-        contentMessage.replaceChildren(cardDaMensagem)
+
+        const footer = document.createElement('div')
+        footer.classList.add('message__footer')
+
+        const footerImgPhone = document.createElement('img')
+        footerImgPhone.src = './img/microphone.png'
+
+        const footerInput = document.createElement('input')
+
+        const footerImgClip = document.createElement('img')
+        footerImgClip.src = './img/clip.png'
+
+        footer.append(footerImgPhone, footerInput, footerImgClip)
+
+
+        contentMessage.replaceChildren(cardDaMensagem, footer)
       })
 
       const containerMessage = document.getElementById('inside-message')
@@ -144,24 +156,18 @@ const carregarContatos = () => {
         container.style.display = 'block'
         getMedia.style.display = 'block'
       }
-
       if (largura < 640) {
-        card.onclick = () => {
-          console.log('clicado no card')
-          containerMessage.style.display = 'block'
-          container.style.display = 'none'
-          getMedia.style.display = 'none'
-               }
+        console.log('clicado no card')
+        containerMessage.style.display = 'block'
+        container.style.display = 'none'
+        getMedia.style.display = 'none'
       } else {
         containerMessage.style.display = 'block'
         container.style.display = 'block'
         getMedia.style.display = 'block'
       }
-    
     }
-
   })
 }
 
 carregarContatos()
-
