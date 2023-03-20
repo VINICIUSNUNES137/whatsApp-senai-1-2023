@@ -38,6 +38,7 @@
 }
 
 .message__content {
+  overflow: auto;
   height: 100%;
 }
 
@@ -157,6 +158,7 @@
   justify-content: center;
   gap: 32px;
   font-weight: 700;
+  /* transform: tr    anslateY(120px); */
 }
 
 .message__home i {

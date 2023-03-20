@@ -37,6 +37,23 @@ main {
   height: 100vh;
 }
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* Fundo que corre */
+
+::-webkit-scrollbar {
+  width: 1.5px;
+  background: transparent;
+}
+
+/* Linha que desce */
+::-webkit-scrollbar-thumb {
+  background: gainsboro;
+  border-radius: 15px;
+}
+/* Linha que desce*/
+
 @media (max-width: 640px) {
   main {
     flex-direction: column;

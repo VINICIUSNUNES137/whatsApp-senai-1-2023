@@ -43,8 +43,8 @@ const carregarContatos = () => {
 
   cards.forEach(card => {
     card.onclick = () => {
-      const cardContainer2 = document.createElement('div')
-      cardContainer2.classList.add('message__header')
+      const headerMessage = document.createElement('div')
+      headerMessage.classList.add('message__header')
 
       const headerImgClip = document.createElement('img')
       headerImgClip.src = './img/menu-aberto.png'
@@ -77,7 +77,7 @@ const carregarContatos = () => {
       menuBotao.append(imgMenu)
       header__contact.append(header__name, messages__description)
       cardContainer.append(menuBotao, imgCard, header__contact)
-      cardContainer2.append(cardContainer, headerImgClip)
+      headerMessage.append(cardContainer, headerImgClip)
 
       const contentMessage = document.createElement('div')
       contentMessage.classList.add('message__content')
@@ -131,26 +131,29 @@ const carregarContatos = () => {
           cardDaMensagem.append(alignOther)
         }
 
-        const footer = document.createElement('div')
-        footer.classList.add('message__footer')
-
-        const footerImgPhone = document.createElement('img')
-        footerImgPhone.src = './img/microphone.png'
-
-        const footerInput = document.createElement('input')
-
-        const footerImgClip = document.createElement('img')
-        footerImgClip.src = './img/clip.png'
-
-        footer.append(footerImgPhone, footerInput, footerImgClip)
 
 
-        contentMessage.replaceChildren(cardDaMensagem, footer)
+
+        contentMessage.replaceChildren(cardDaMensagem)
       })
+
+      const footer = document.createElement('div')
+      footer.classList.add('message__footer')
+
+      const footerImgPhone = document.createElement('img')
+      footerImgPhone.src = './img/microphone.png'
+
+      const footerInput = document.createElement('input')
+      footerInput.placeholder = 'Digite aqui sua mensagem'
+
+      const footerImgClip = document.createElement('img')
+      footerImgClip.src = './img/clip.png'
+
+      footer.append(footerImgPhone, footerInput, footerImgClip)
 
       const containerMessage = document.getElementById('inside-message')
 
-      containerMessage.replaceChildren(cardContainer2, contentMessage)
+      containerMessage.replaceChildren(headerMessage, contentMessage, footer)
 
       const getMedia = document.getElementById('media')
       menuBotao.onclick = () => {
