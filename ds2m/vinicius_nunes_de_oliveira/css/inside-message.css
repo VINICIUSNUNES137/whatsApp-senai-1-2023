@@ -1,8 +1,9 @@
 .inside-message {
   display: flex;
   flex-direction: column;
-  /* height: 90%; */
-  padding-bottom: 24px;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 148px;
 }
 
 .message__header {
@@ -37,7 +38,7 @@
 }
 
 .message__content {
-  height: 80%;
+  height: 100%;
 }
 
 .message__content__card {
