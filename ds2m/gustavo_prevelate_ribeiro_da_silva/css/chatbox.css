@@ -1,0 +1,48 @@
+.chat{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow: auto;
+}
+
+
+
+.chatbox-input{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #f0f0f0;
+    pad: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.chatbox-input ion-icon{
+    position: relative;
+    font-size: 1.8rem;
+    color: #51585c;
+    cursor: pointer;
+    
+    
+}
+
+.chatbox-input ion-icon:nth-child(1){
+    margin-left: 15px;
+}
+
+.chatbox-input input{
+    position: relative;
+    width: 90%;
+    margin: 0 20px;
+    pad: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    
+    
+}

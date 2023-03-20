@@ -1,0 +1,39 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient( #009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 1396px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #fff;
+    box-shadow: 0 1px 1px o rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+}
+
+
+/* Classes usadas nos dois lado (Left and Right) */
+
+.img__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img__text h4 {
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-left: 15px;
+}
+
+.img__text h4 span {
+    font-size: .8rem;
+    color: #555;
+}

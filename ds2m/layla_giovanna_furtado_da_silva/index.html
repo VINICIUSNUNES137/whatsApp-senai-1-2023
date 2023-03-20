@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link do Ico -->
+    <link rel="shortcut icon" href="./recursos/ico/whatsapp.ico" type="image/x-icon" />
+
+    <!-- Script do js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <!-- <script src="./js/contatos.js" defer></script>
+    <script src="./js/index.js" defer></script> -->
+
+    <!-- link do css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/left-side.css">
+    <link rel="stylesheet" href="./css/right-side.css">
+    <title>WhatsApp</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- lado esquerdo -->
+        <div class="left__side">
+
+            <!-- header -->
+            <div class="header">
+                <div class="user__img">
+                    <img src="./recursos/images/user-img_resized.png" class="cover" alt="User Image" />
+                </div>
+                <ul class="nav__icons">
+                    <li>
+                        <ion-icon name="scan-circle-outline"></ion-icon>
+                    </li>
+
+                    <li>
+                        <ion-icon name="chatbubble-ellipses"></ion-icon>
+                    </li>
+
+                    <li>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+            <!-- search - pesquisa -->
+            <div class="search__chat">
+                <div>
+                    <input type="text" placeholder="Search or start a new chat" />
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+            <!--  chat list - lista de mensagem -->
+            <div class="chat__list">
+                <div class="block active">
+                    <div class="img__bx">
+                        <img src="./recursos/images/contact1.png" class="cover" alt="Contato 1">
+                    </div>
+                    <div class="details">
+                        <div class="list__head">
+                            <h4>Ingryd Shirlley</h4>
+                            <p class="time">11:11</p>
+                        </div>
+                        <div class="message__p">
+                            <p>Lorem ipsum dolor sit amet. Just a little textttttttttttttttttttt</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block unread">
+                    <div class="img__bx">
+                        <img src="./recursos/images/contact2.png" class="cover" alt="Contato 2">
+                    </div>
+                    <div class="details">
+                        <div class="list__head">
+                            <h4>Layla</h4>
+                            <p class="time">06:11</p>
+                        </div>
+                        <div class="message__p">
+                            <p>Hi, I found you on youtube</p>
+                            <b>1</b>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- lado direito -->
+        <div class="rigth__side">
+            <!-- header -->
+            <div class="header">
+                <div class="img__text">
+                    <div class="user__img">
+                        <img src="./recursos/images/contact1.png" class="cover" alt="User Image" />
+                    </div>
+                    <h4>Layla <br> <span>Online</span></h4>
+                </div>
+                <ul class="nav__icons">
+                    <li>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </li>
+
+                    <li>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+            <!-- chatbox -->
+            <div class="chatbox">
+                <div class="message my__message">
+                    <p>Hi aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br> <span>19:11</span></p>
+                </div>
+                <div class="message sender__message">
+                    <p>Hello testeeeeeeeeeee <br> <span>19:13</span></p>
+                </div>
+            </div>
+            <div class="chatbox__input">
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="attach-outline"></ion-icon>
+                <input type="text" placeholder="Type a message">
+                <ion-icon name="mic"></ion-icon>
+            </div>
+        </div>
+
+        <!-- final do container -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px,  #d9dbd5 100%);
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    position: relative;
+    width: 1369px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0,0,0,0.06);
+    display: flex;
+}
+.container .leftSide{
+    position: relative;
+    flex: 30%;
+    background: #fff;
+    border-right: 1px solid rgba(0,0,0,0.06);
+}
+.container .rightSide{
+    position: relative;
+    flex: 70%;
+    background: #d9dbd5;
+}
+.container .rightSide ::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 135px);
+    background: url(img/background.png);
+    opacity: 0.06;
+}
+.header{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.userImg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.search_chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #f6f6f6;
+    padding: 0 15px;
+}
+.search_chat div{
+    width: 100%;
+}
+.search_chat div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 6px;
+    height: 38px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+.search_chat div input::placeholder{
+    color: #bbb;
+}
+.search_chat div ion-icon{
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    font-size: 1.2rem;
+}
+.chatList{
+   position: relative;
+   height: calc(100% - 110px);
+   overflow-y: auto;
+}
+.blockchat{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    gap: 1rem;
+}
+.card_image{
+    grid-area: image;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.sender{
+    grid-area: sender;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+}
+.description{
+    grid-area: description;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+.sender_right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.senderRight{
+    font-weight: 500;
+    line-height: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.senderRight span{
+    font-size: 0.8em;
+    color: #555;
+}
+.message{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+.message p{
+    background: #dcf8c6;
+    padding: 12px;
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.message p ::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+}
+.message p span{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+.my_message{
+    justify-content: flex-end;
+}
+.contact_message{
+    justify-content: flex-start;
+}
+.contact_message p{
+    background: #fff;
+    text-align: left;
+}
+.message.contact_message p ::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+}
+.chatBox{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 135px);
+    padding: 50px;
+    overflow-y: auto;
+}
+.chatBox_input{
+    position: relative;
+    align-self: flex-end;
+}
+.chatBox_input input{
+    width: 90%;
+    border-radius: 30px;
+    font-size: 1rem;
+}

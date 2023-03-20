@@ -1,0 +1,40 @@
+html {
+    background-color: var(--primary__color);
+}
+
+body {
+    background-color: var(--primary__color);
+    display: grid;
+    grid-template-areas: 'header main';
+    grid-template-columns: minmax(300px, 350px) minmax(400px, 1fr);
+    transition: background 0.2s linear;
+}
+
+header {
+    display: block;
+    height: 100vh;
+    background-color: var(--backContact__color);
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary__color);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: var(--backContact__color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary__color);
+}
+
+main {
+    grid-template-areas: 'header''main''footer';
+    grid-template-rows: 85px 1fr 65px;
+    background-color: var(--primary__color);
+    display: none;
+    height: 100vh;
+    overflow-y: scroll;
+}

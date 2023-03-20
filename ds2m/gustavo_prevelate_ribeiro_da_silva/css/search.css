@@ -1,0 +1,34 @@
+.search{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pad: 0 15px;
+}
+
+.search div{
+    width: 100%;
+}
+
+.search div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #FFFFFF;
+    padding: 6px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.search div ion-icon{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    font-size: 1.2rem;
+    
+}

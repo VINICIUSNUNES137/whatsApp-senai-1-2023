@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/container.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/block.css">
+    <link rel="stylesheet" href="CSS/messages.css">
+    <link rel="stylesheet" href="CSS/chatbox.css">
+    <link rel="stylesheet" href="app.js">
+    <title> WhatsApp</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box-left">
+            <div class="header">
+                <div class="userimg">
+                    <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact1.png" alt="" class="cover">
+                </div>
+                <ul class="icons">
+                    <li> <ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+            <div class="search">
+                <div>
+                    <input type="text" placeholder="Pesquisar ou começar uma nova conversar">
+                    <ion-icon name="search-outline""></ion-icon>
+                </div>
+            </div>
+            <div class="chatlist">
+                <button class="block active" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact1.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Ana Maria</h4>
+                            <p class="time">14:35 PM</p>
+                        </div>
+                        <div class="message" id="mensagens">
+                             <p>Not yet. I'm thinking about going to the beach. What about...</p> 
+                        </div>
+
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact2.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Jane Smith</h4>
+                            <p class="time">9:15 AM</p>
+                        </div>
+                        <div class="message" id="mensagens">
+                            <p>Yes, I have. They look great!</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact3.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Mark-Johnson</h4>
+                            <p class="time">13:15 PM</p>
+                        </div>
+                        <div class="message">
+                            <p>Yes, we're making good progress. We should be able to deli...</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact4.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Sarah-Lee</h4>
+                            <p class="time">10:15 AM</p>
+                        </div>
+                        <div class="message">
+                            <p>Tenho trabalhado bastante, mas está tudo bem. E você?</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact5.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>John-Doe</h4>
+                            <p class="time">11:10 AM</p>
+                        </div>
+                        <div class="message">
+                            <p>Acho que você vai gostar!</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact6.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Julia-Smith</h4>
+                            <p class="time">12:15 PM</p>
+                        </div>
+                        <div class="message">
+                            <p>Todos estão trabalhando duro e focados no objetivo!</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="block unread" id="block-media">
+                    <div class="imgbx">
+                        <img src="/ds2m/gustavo_prevelate_ribeiro_da_silva/recursos/images/img/contact7.png" alt="" class="cover" id="contato-img">
+                    </div>
+                    <div class="details">
+                        <div class="listhead">
+                            <h4>Max-Kellerman</h4>
+                            <p class="time">13:10 PM</p>
+                        </div>
+                        <div class="message">
+                            <p>Bom trabalho, fico feliz em ver vocês tentando coisas novas!</p>
+                        </div>
+                    </div>
+                </button>
+                
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="header">
+                <div class="img-perfil">
+                    <div class="userimg">
+                        <img src="recursos/images/img/contact1.png" alt="" class="cover">   
+                    </div>
+                    <h4>Ana Maria<br><span>Online</span></h4>
+                </div>
+                <ul class="icons">
+                        <li><ion-icon name="search-outline""></ion-icon></li>
+                        <li><ion-icon name="ellipsis-vertical""></ion-icon></li>
+                </ul>
+            </div>  
+            <div class="chat">
+                <div class="messages friend-message">
+                    <p>Hello Leonid, how are you doing today?<br><span>14:25</span></p>
+                </div>
+                <div class="messages you-message">
+                    <p>Hi, I'm doing fine. Thanks for asking.<br><span>14:20</span></p>
+                </div>                
+                <div class="messages friend-message">
+                    <p>Great to hear that. Do you have any plans for the weekend?<br><span>14:30</span></p>
+                </div>
+                <div class="messages you-message">
+                    <p>Not yet. I'm thinking about going to the beach. What about you?<br><span>14:35</span></p>
+                </div>
+                
+            </div>
+            <div class="chatbox-input">
+                <ion-icon name="happy-outline""></ion-icon>
+                <ion-icon name="attach-outline""></ion-icon>
+                <input type="text" placeholder="Mensagem">
+                <ion-icon name="mic-outline""></ion-icon>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

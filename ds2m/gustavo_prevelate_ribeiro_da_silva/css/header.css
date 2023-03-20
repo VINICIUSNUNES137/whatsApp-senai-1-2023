@@ -1,0 +1,48 @@
+.userimg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cover{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icons{
+    display: flex;
+}
+
+.icons li{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+.img-perfil{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-perfil h4{
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-left: 15px;
+}
+
+.img-perfil h4 span{
+    font-size: 0.8rem;
+    color: #555555;
+    
+}

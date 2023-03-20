@@ -27,6 +27,7 @@ Você deverá desenvolver um clone do whatsApp responsivo. O projeto deverá ate
 - Interface baseada no endereço https://web.whatsapp.com/
 - Consumir os dados do arquivos contatos.js
 - Seguir as boas práticas como semântica e acessibilidade;
+- Obs.: para importar o arquivo contatos.js utilize o seguinte endereço: https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js
 ---
 # Antes de começar a desenvolver
 

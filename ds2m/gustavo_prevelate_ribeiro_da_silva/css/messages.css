@@ -1,0 +1,97 @@
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.message p{
+    color: #aaaaaa;
+    overflow: hidden;
+    
+}
+
+.message b{
+    background: #06d755;
+    color: #FFFFFF;
+    min-height: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+      
+}
+.messages{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.messages p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: #dcf8c6;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    
+    
+}
+
+.messages p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background:linear-gradient(135deg, #dcf8c6 0%,#dcf8c6 50%, transparent 50%, transparent);
+    
+    
+}
+
+.messages p span{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    opacity: 0.3;
+    
+}
+
+.you-message{
+    justify-content: flex-end;
+}
+
+.friend-message{
+    justify-content: flex-start;
+    
+}
+
+.friend-message p{
+    background: #FFFFFF;
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+
+}
+
+.messages.friend-message p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background:linear-gradient(255deg, #FFFFFF 0%,#FFFFFF 50%, transparent 50%, transparent);
+    
+    
+}
