@@ -46,6 +46,9 @@ const carregarContatos = () => {
       const cardContainer2 = document.createElement('div')
       cardContainer2.classList.add('message__header')
 
+      const headerImgClip = document.createElement('img')
+      headerImgClip.src = './img/menu-aberto.png'
+
       const cardContainer = document.createElement('div')
       cardContainer.classList.add('group')
 
@@ -74,7 +77,7 @@ const carregarContatos = () => {
       menuBotao.append(imgMenu)
       header__contact.append(header__name, messages__description)
       cardContainer.append(menuBotao, imgCard, header__contact)
-      cardContainer2.append(cardContainer)
+      cardContainer2.append(cardContainer, headerImgClip)
 
       const contentMessage = document.createElement('div')
       contentMessage.classList.add('message__content')
@@ -151,16 +154,15 @@ const carregarContatos = () => {
 
       const getMedia = document.getElementById('media')
       menuBotao.onclick = () => {
-        console.log('clicado no botão')
         containerMessage.style.display = 'none'
         container.style.display = 'block'
         getMedia.style.display = 'block'
       }
-      if (largura < 640) {
-        console.log('clicado no card')
+      if (largura <= 640) {
         containerMessage.style.display = 'block'
         container.style.display = 'none'
         getMedia.style.display = 'none'
+        getMedia.style.maxWidth = '100vw'
       } else {
         containerMessage.style.display = 'block'
         container.style.display = 'block'

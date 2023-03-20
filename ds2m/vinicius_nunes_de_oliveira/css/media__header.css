@@ -12,7 +12,8 @@
 
 .media {
   max-width: 400px;
-  height: 90%;
+  height: 100%;
+  padding-bottom: 54px;
 }
 
 .contact-img {

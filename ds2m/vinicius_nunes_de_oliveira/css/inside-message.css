@@ -1,9 +1,8 @@
 .inside-message {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   /* height: 90%; */
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 
 .message__header {
@@ -144,4 +143,21 @@
   display: flex;
   justify-content: flex-end;
   color: lightslategrey;
+}
+
+.message__home {
+  height: 100%;
+  width: 100%;
+  color: gray;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  font-weight: 700;
+}
+
+.message__home i {
+  font-size: 8rem;
 }
