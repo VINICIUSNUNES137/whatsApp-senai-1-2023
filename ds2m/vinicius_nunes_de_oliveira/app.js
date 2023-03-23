@@ -61,7 +61,7 @@ const carregarContatos = async () => {
 
       const headerMessage = document.createElement('div')
       headerMessage.classList.add('message__header')
-
+//aaa
       const headerImgClip = document.createElement('img')
       headerImgClip.src = './img/menu-aberto.png'
 
