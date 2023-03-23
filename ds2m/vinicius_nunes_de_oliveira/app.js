@@ -2,7 +2,14 @@
 window.addEventListener('resize', function () {
   location.reload()
 })
-import { contatos } from './recursos/contatos.js'
+
+const puxarContato = async () => {
+
+
+
+}
+
+const contatos = puxarContato()
 
 const largura = window.screen.width
 let i = 0
@@ -35,7 +42,15 @@ const criarContato = contato => {
   return card
 }
 
-const carregarContatos = () => {
+const carregarContatos = async () => {
+
+
+  const url = `http://localhost:8080/v1/senai/contato?uf=3`
+
+  const response =  await fetch(url)
+  const data = await response.json()
+  const contatos = await data.contatos
+
   const container = document.getElementById('container')
   const cards = contatos.map(criarContato)
 
@@ -43,6 +58,7 @@ const carregarContatos = () => {
 
   cards.forEach(card => {
     card.onclick = () => {
+
       const headerMessage = document.createElement('div')
       headerMessage.classList.add('message__header')
 
