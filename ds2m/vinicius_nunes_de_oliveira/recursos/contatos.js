@@ -2,7 +2,7 @@
 
  const contatos = async () => {
 
-    const url = `http://localhost:8080/v1/senai/contato?uf=3`
+    const url = `http://localhost:8080/v1/senai/contato?uf=1`
 
     const response =  await fetch(url)
     const data = await response.json()

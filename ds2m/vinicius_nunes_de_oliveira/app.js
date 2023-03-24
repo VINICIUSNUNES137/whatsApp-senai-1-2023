@@ -3,13 +3,6 @@ window.addEventListener('resize', function () {
   location.reload()
 })
 
-const puxarContato = async () => {
-
-
-
-}
-
-const contatos = puxarContato()
 
 const largura = window.screen.width
 let i = 0
@@ -42,10 +35,10 @@ const criarContato = contato => {
   return card
 }
 
-const carregarContatos = async () => {
+const carregarContatos = async (link) => {
 
 
-  const url = `http://localhost:8080/v1/senai/contato?uf=0`
+  const url = link
 
   const response =  await fetch(url)
   const data = await response.json()
@@ -191,4 +184,42 @@ const carregarContatos = async () => {
   })
 }
 
-carregarContatos()
+
+
+  let pessoa1 = document.getElementById(`card-1`)
+  pessoa1.addEventListener('click', function(){
+    let url = `http://localhost:8080/v1/senai/contato?uf=0`
+    displays()
+
+    carregarContatos(url)
+  })
+
+  let pessoa2 = document.getElementById(`card-2`)
+  pessoa2.addEventListener('click', function(){
+    let url = `http://localhost:8080/v1/senai/contato?uf=1`
+    displays()
+
+    carregarContatos(url)
+  })
+
+  let pessoa3 = document.getElementById(`card-3`)
+  pessoa3.addEventListener('click', function(){
+    let url = `http://localhost:8080/v1/senai/contato?uf=2`
+    displays()
+
+    carregarContatos(url)
+  })
+
+  let pessoa4 = document.getElementById(`card-4`)
+  pessoa4.addEventListener('click', function(){
+    let url = `http://localhost:8080/v1/senai/contato?uf=3`
+    displays()
+    carregarContatos(url)
+  })
+
+function displays(){
+  document.getElementById('main').style.display = 'block'
+  document.getElementById('containerInicial').style.display = 'none'
+}
+
+carregarContatos(`http://localhost:8080/v1/senai/contato?uf=0`)
