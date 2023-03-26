@@ -6,6 +6,7 @@ window.addEventListener('resize', function () {
 
 const largura = window.screen.width
 let i = 0
+let contUser = 0
 
 const criarContato = contato => {
   const card = document.createElement('div')
@@ -40,7 +41,7 @@ const carregarContatos = async (link) => {
 
   const url = link
 
-  const response =  await fetch(url)
+  const response = await fetch(url)
   const data = await response.json()
   const contatos = await data.contatos
 
@@ -54,7 +55,7 @@ const carregarContatos = async (link) => {
 
       const headerMessage = document.createElement('div')
       headerMessage.classList.add('message__header')
-//aaa
+      //aaa
       const headerImgClip = document.createElement('img')
       headerImgClip.src = './img/menu-aberto.png'
 
@@ -174,7 +175,7 @@ const carregarContatos = async (link) => {
         containerMessage.style.display = 'block'
         container.style.display = 'none'
         getMedia.style.display = 'none'
-        getMedia.style.maxWidth = '100vw'
+        // getMedia.style.maxWidth = '100vw'
       } else {
         containerMessage.style.display = 'block'
         container.style.display = 'block'
@@ -184,42 +185,85 @@ const carregarContatos = async (link) => {
   })
 }
 
-
-
-  let pessoa1 = document.getElementById(`card-1`)
-  pessoa1.addEventListener('click', function(){
-    let url = `http://localhost:8080/v1/senai/contato?uf=0`
-    displays()
-
-    carregarContatos(url)
-  })
-
-  let pessoa2 = document.getElementById(`card-2`)
-  pessoa2.addEventListener('click', function(){
-    let url = `http://localhost:8080/v1/senai/contato?uf=1`
-    displays()
-
-    carregarContatos(url)
-  })
-
-  let pessoa3 = document.getElementById(`card-3`)
-  pessoa3.addEventListener('click', function(){
-    let url = `http://localhost:8080/v1/senai/contato?uf=2`
-    displays()
-
-    carregarContatos(url)
-  })
-
-  let pessoa4 = document.getElementById(`card-4`)
-  pessoa4.addEventListener('click', function(){
-    let url = `http://localhost:8080/v1/senai/contato?uf=3`
-    displays()
-    carregarContatos(url)
-  })
-
-function displays(){
-  document.getElementById('main').style.display = 'block'
+function displays() {
   document.getElementById('containerInicial').style.display = 'none'
 }
 
-carregarContatos(`http://localhost:8080/v1/senai/contato?uf=0`)
+
+const criarUsuario = async () => {
+
+
+
+  const pessoaCard = document.createElement('div')
+  pessoaCard.classList.add('card-pessoa')
+  pessoaCard.id = contUser
+  contUser++
+
+  const imgUser = document.createElement('img')
+  imgUser.classList('imagem-pessoa')
+  imgUser.src = user.profile - image
+
+  const nameUser = document.createElement('p')
+  nameUser.textContent = user.nickname
+  nameUser.classList.add('nome-pessoa')
+
+  pessoaCard.append(imgUser, nameUser)
+
+  return pessoaCard
+
+}
+
+const carregarUsuario = async () => {
+
+  const response = await fetch(`http://localhost:8080/v1/senai/user?uf=0`)
+  const data = await response.json()
+  const user = await data
+
+  const containerUsers = document.getElementById('card-container')
+  const users = user.map(criarUsuario)
+
+  container.replaceChildren(...user)
+}
+
+
+{/* <div class="containerInicial" id="containerInicial">
+<p class="selecione">SELECIONE UM PERFIL</p>
+<div class="card" id="card-container">
+  <div class="card-pessoa" id="card-1">
+<img class="imagem-pessoa" src="./img/contact1.png" alt="">
+<p class="nome-pessoa">Pessoa 1</p>
+</div> */}
+
+
+let pessoa1 = document.getElementById(`card-1`)
+pessoa1.addEventListener('click', function () {
+  let url = `http://localhost:8080/v1/senai/contato?uf=0`
+  carregarContatos(url)
+  displays()
+
+})
+
+let pessoa2 = document.getElementById(`card-2`)
+pessoa2.addEventListener('click', function () {
+  let url = `http://localhost:8080/v1/senai/contato?uf=1`
+  carregarContatos(url)
+  displays()
+
+})
+
+let pessoa3 = document.getElementById(`card-3`)
+pessoa3.addEventListener('click', function () {
+  let url = `http://localhost:8080/v1/senai/contato?uf=2`
+  carregarContatos(url)
+  displays()
+
+})
+
+let pessoa4 = document.getElementById(`card-4`)
+pessoa4.addEventListener('click', function () {
+  let url = `http://localhost:8080/v1/senai/contato?uf=3`
+  carregarContatos(url)
+  displays()
+})
+
+
