@@ -237,7 +237,7 @@ const carregarUsuario = async () => {
 
 let pessoa1 = document.getElementById(`card-1`)
 pessoa1.addEventListener('click', function () {
-  let url = `https://api-whats-viniciusnunes137.onrender.com/v1/senai/contato?uf=0`
+  let url = `https://api-whats-production-6409.up.railway.app/v1/senai/contato?uf=0`
   carregarContatos(url)
   displays()
 
@@ -245,7 +245,7 @@ pessoa1.addEventListener('click', function () {
 
 let pessoa2 = document.getElementById(`card-2`)
 pessoa2.addEventListener('click', function () {
-  let url = `https://api-whats-viniciusnunes137.onrender.com/v1/senai/contato?uf=1`
+  let url = `https://api-whats-production-6409.up.railway.app/v1/senai/contato?uf=1`
   carregarContatos(url)
   displays()
 
@@ -253,7 +253,7 @@ pessoa2.addEventListener('click', function () {
 
 let pessoa3 = document.getElementById(`card-3`)
 pessoa3.addEventListener('click', function () {
-  let url = `https://api-whats-viniciusnunes137.onrender.com/v1/senai/contato?uf=2`
+  let url = `https://api-whats-production-6409.up.railway.app/v1/senai/contato?uf=2`
   carregarContatos(url)
   displays()
 
@@ -261,7 +261,7 @@ pessoa3.addEventListener('click', function () {
 
 let pessoa4 = document.getElementById(`card-4`)
 pessoa4.addEventListener('click', function () {
-  let url = `https://api-whats-viniciusnunes137.onrender.com/v1/senai/contato?uf=3`
+  let url = `https://api-whats-production-6409.up.railway.app/v1/senai/contato?uf=3`
   carregarContatos(url)
   displays()
 })
